@@ -1,0 +1,74 @@
+.main
+    height: 100vh
+    width: 100%
+    display: flex
+    justify-content: center
+   
+    background-repeat: no-repeat
+    background-size: cover
+    text-align: center
+    a
+        color: #1bbd1b
+.container 
+    margin-top: 20vh
+    width: 400px
+    height: 460px
+    border-radius: 20px
+    
+    position: relative
+    border: 1px solid #fff
+form
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-evenly
+    height: 100%
+.errorMessage
+    // position: absolute
+    text-align: center
+    width: 100%
+    // top: -23px
+    color: #ffeb38
+    font-size: 14px
+.input
+    position: relative
+    display: flex
+    justify-content: center
+    width: 100%
+    position: relative
+
+    input
+        width: 70%
+        padding: 12px 0 5px 14px
+        font-size: 16px
+        border-radius: 10px
+        border: 1px solid black
+        
+    button
+        
+        padding: 10px 20px 10px 20px
+        border-radius: 20px
+        border: 1px solid black
+        color: #fff
+        background-color: #1bbd1b
+.loader
+    position: absolute
+    bottom: 20px
+    left: 0
+    right: 0
+.status
+    width: 20px
+    position: absolute
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    right: 20px
+    img
+        width: 20px
+        height: 20px
+@media (max-width: 400px)
+    .container
+        width: 95%
+    .status
+        right: 10px

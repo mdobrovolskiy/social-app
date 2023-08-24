@@ -1,0 +1,67 @@
+.main 
+    width: 300px
+    height: 500px
+    position: absolute
+    right: 10%
+    top: 50px
+    animation: mainMount 0.5s
+    .thisHeader
+        display: flex
+        justify-content: space-between
+        text-align: left
+        align-items: center
+        cursor: pointer
+        .action
+            width: 20%
+            color: #2882be
+            text-align: right
+            font-size: 14px
+    .name
+        color: #fff
+        padding-left: 10px
+        width: 60%
+        display: flex
+        flex-direction: column
+        font-weight: 600
+        font-size: 14px
+    .recommend
+        margin-bottom: 15px
+        margin-top: 10px
+        color: #969393
+        font-weight: 400
+    .subtext
+        color: #8f8c8c
+        font-weight: 500
+.info
+    display: flex
+    margin-top: 20px
+    flex-wrap: wrap
+    font-size: 13px
+    font-weight: 300
+    
+    ul
+        display: flex
+        width: 100%
+        margin-block-start: 0
+        padding-inline-start: 0
+        flex-wrap: wrap
+
+    li
+        color: #858282
+        text-indent: -8px
+        margin-left: 20px
+    span
+        color: #858282
+.avatarWrapper
+    width: 50px
+    height: 50px
+@keyframes mainMount
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+@media (max-width: 1500px) 
+    .main
+        right: 20px
+
+       

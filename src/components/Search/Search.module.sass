@@ -1,0 +1,78 @@
+.main
+    height: 100vh
+    width: 340px
+    position: fixed
+    margin-left: 70px
+    border-right: 1px solid grey
+    animation: main 0.5s
+    background-color: var(--main-bg-color)
+    .searchHeader
+        border-bottom: 1px solid grey
+        padding-bottom: 40px
+        padding-left: 10px
+    .text
+        text-align: left
+        margin-top: 40px
+        font-weight: 700
+        font-size: 26px
+    .inputs
+        margin-top: 20px
+        input
+            width: 90%
+            height: 35px
+            border-radius: 8px
+            background-color: #302e2e
+            padding-left: 20px
+            font-size: 15px
+            border: none
+            color: #fff
+            &:focus
+                outline: 1px solid #fff
+    .wrapper 
+        display: flex
+        flex-direction: column
+        overflow: auto
+        height: 800px
+.close
+    width: 40px
+    height: 40px
+    position: absolute
+    left: 280px
+    top: 14px
+    z-index: 3
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgb(33, 33, 33)
+    border-radius: 50%
+.closeItemLeft
+    width: 27px
+    height: 2px
+    background-color: #fff
+    transform: rotate(45deg) 
+.closeItemRight
+    width: 27px
+    height: 2px
+    background-color: #fff
+    transform: rotate(135deg)
+    position: absolute
+@keyframes main
+    0%
+        width: 0
+    100%
+        width: 340px
+@media ( max-width: 420px )
+    @keyframes main
+        0%
+            width: 0
+        100%
+            width: 230px
+    .close
+        left: 180px
+    .main
+        width: 230px
+        .inputs
+            input
+                width: 85%
+    

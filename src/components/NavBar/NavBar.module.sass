@@ -1,0 +1,126 @@
+.father 
+    width: 340px
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    z-index: 1
+.wrapper
+    width: 70px
+    height: 100vh
+.filler
+    height: 90px
+.main
+    background-color: var(--main-bg-color)
+    color: white
+    width: 340px
+    height: 100vh
+    border-right: 1px solid 
+    border-right-color: grey
+    position: fixed
+    transition: 0.7s
+    font-weight: 400
+    z-index: 1
+    animation: mount 0.5s
+    .logo
+        position: relative
+        height: 100px
+    .logoImg
+        width: 35px
+        position: absolute
+        top: 50px
+        left: 17px
+        cursor: pointer
+    .smalllogo
+        width: 100%
+        .logo
+            cursor: pointer
+            display: flex
+            align-items: center
+        
+.small
+    width: 70px
+.burger
+    width: 100%
+    padding-top: 10px
+    display: none
+    
+    position: relative
+.wrap
+    position: absolute
+    left: 20px
+    top: 27px
+    z-index: 3
+    cursor: pointer
+.item
+    width: 25px
+    height: 2px
+    background-color: #fff
+    margin-bottom: 5px
+.close
+    width: 40px
+    height: 40px
+    position: absolute
+    left: 280px
+    top: 14px
+    z-index: 3
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgb(33, 33, 33)
+    border-radius: 50%
+.closeItemLeft
+    width: 27px
+    height: 2px
+    background-color: #fff
+    transform: rotate(45deg) 
+.closeItemRight
+    width: 27px
+    height: 2px
+    background-color: #fff
+    transform: rotate(135deg)
+    position: absolute
+
+@media (max-width: 1000px) 
+    .burger
+        display: flex
+        justify-content: center
+        .logo
+            z-index: 1
+            h1
+                padding: 0
+                margin: 0
+                
+    .father
+        display: none
+    @keyframes mount
+        0%
+            width: 0
+            
+        100%
+            width: 340px
+        
+@media ( max-width: 400px )
+    .close 
+        left: 230px
+    .father 
+        width: 280px
+    .main
+        width: 280px
+    .small
+        width: 70px
+    @keyframes mount
+        0%
+            width: 0
+            
+        100%
+            width: 280px
+
+    
+    
+
+    
+
+
+        

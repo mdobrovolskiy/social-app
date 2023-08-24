@@ -1,0 +1,60 @@
+.main
+    display: flex
+    flex-wrap: wrap
+    animation: mainMount 0.5s
+    width: 100%
+.postWrapper
+    width: 33.33%
+    position: relative
+.postImage
+    margin: 10px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    &::before
+        content: ''
+        display: block
+        padding-top: 100%
+.mainBg
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    backdrop-filter: blur(2px)
+    z-index: 12
+    flex-direction: column
+.close
+    height: 40px
+    width: 400px
+    display: flex
+    justify-content: flex-end
+.postWrap
+    border-radius: 15px
+    background-color: #666666
+    width: 400px
+    padding-top: 10px
+    animation: hello 0.1s
+@keyframes mainMount
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+@media ( max-width: 800px )
+    .postWrapper
+        width: 50%
+@media ( max-width: 500px )
+    .postWrapper
+        width: 100%
+    .postWrap
+        width: 300px
+    .close
+        width: 300px
+@keyframes hello
+    0%
+        transform: scale(0.9)
+    100%
+        transform: scale(1)

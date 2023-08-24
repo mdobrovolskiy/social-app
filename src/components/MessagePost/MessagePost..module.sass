@@ -1,0 +1,58 @@
+.main
+    width: 100%
+    border-radius: 20px
+    padding: 10px
+    box-sizing: border-box
+    cursor: pointer
+.user
+    display: flex
+    margin-bottom: 10px
+    align-items: center
+.content
+    width: 100%
+    padding-bottom: 100%
+    background-color: #fff
+    position: relative
+    border-radius: 10px
+    .imageUrl
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 5px
+.closeWrap
+    position: absolute
+    right: 10px
+    z-index: 200
+.avatarWrapper
+    width: 40px
+    height: 40px
+    margin-right: 5px
+.postWrapper
+    position: fixed
+    top: 0
+    width: 100%
+    height: 100%
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    backdrop-filter: blur(10px)
+    z-index: 5
+    
+.containerPost
+    padding-top: 20px
+    position: relative
+    border-radius: 20px
+    width: 40%
+    margin: auto
+    background-color: #636060
+@media (max-width: 768px)
+    .containerPost
+        width: 60%
+@media (max-width: 500px)
+    .containerPost
+        width: 80%
+    
