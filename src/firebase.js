@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getFirestore } from '@firebase/firestore'
 const firebaseConfig = {
-  apiKey: 'AIzaSyAuZhnQl09xDEtJm8CPq6CubRGlgGZVOdA',
-  authDomain: 'soci-b0d19.firebaseapp.com',
-  projectId: 'soci-b0d19',
-  storageBucket: 'soci-b0d19.appspot.com',
-  messagingSenderId: '804139684333',
-  appId: '1:804139684333:web:042b43a52a5fd6452e17e4',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MD,
+  appId: process.env.REACT_APP_APP_ID,
 }
 
 const app = initializeApp(firebaseConfig)

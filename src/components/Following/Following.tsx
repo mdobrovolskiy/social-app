@@ -18,7 +18,6 @@ const Following = ({
 }: IFollowList) => {
   const [isLoading, setIsLoading] = useState(false)
   const [followingUsers, setFollowingUsers] = useState<any>([])
-  const [error, setError] = useState(false)
   const modalRef: any = useRef()
   useEffect(() => {
     if (
