@@ -44,15 +44,18 @@ const PostLikesList = ({ id, setWhoLikedOpened }: IPostLikes) => {
       console.log('No such document!')
     }
   }
+
   const getLikes = async () => {
     const docRef = doc(db, 'posts', id)
     const docSnap = await getDoc(docRef)
     if (docSnap.exists()) {
       const likeList = docSnap.data().likes
-      const result = await Promise.all(
-        likeList.map((id: string) => getUserData(id))
-      )
-      setLikes(result)
+      if (likeList) {
+        const result = await Promise.all(
+          likeList.map((id: string) => getUserData(id))
+        )
+        setLikes(result)
+      }
     } else {
       setError('No likes found, try again')
     }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './EditPost.module.sass'
 interface IEditPost {
   setEditOpened: React.Dispatch<React.SetStateAction<boolean>>
@@ -12,7 +12,19 @@ const EditPost = ({
   setEditDescrOpened,
   setEditOpened,
 }: IEditPost) => {
-  console.log(deletePost)
+  const modalRef: React.RefObject<HTMLDivElement> = React.useRef(null)
+  useEffect(() => {
+    function handler(e: any) {
+      console.log(e.target)
+      if (!modalRef.current?.contains(e.target)) {
+        setEditOpened(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => {
+      document.removeEventListener('mousedown', handler)
+    }
+  }, [])
   const checkConfirm = () => {
     setEditOpened(() => false)
     const q = window.confirm('Delete this post?')
@@ -25,7 +37,7 @@ const EditPost = ({
     setEditOpened(() => false)
   }
   return (
-    <div className={styles.main}>
+    <div ref={modalRef} className={styles.main}>
       <div onClick={checkConfirm} className={styles.delete}>
         Delete{' '}
         <img
